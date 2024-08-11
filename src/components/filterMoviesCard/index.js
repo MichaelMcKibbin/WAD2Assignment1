@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
@@ -58,7 +58,6 @@ export default function FilterMoviesCard(props) {
         "&:hover": {
           transform: "scale(1.02)",
         },
-        boxShadow: "0 0 10px rgba(128, 0, 128, 0.5)",
         backgroundColor: "#c1d8e3",
         boxShadow: "0 0 10px rgba(20, 40, 60, 0.2)",
         "& .MuiCardContent-root": {
