@@ -36,7 +36,7 @@ const PlaylistMoviesPage = () => {
 
   return (
     <PageTemplate
-      title="Playlist Movies"
+      title="My Playlist"
       movies={movies}
       action={(movie) => {
         return (

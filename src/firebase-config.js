@@ -6,8 +6,7 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const app = firebase.initializeApp({
-  //apiKey: process.env.FIREBASE_API_KEY,
-  apiKey: "AIzaSyCyFKs03-if_l02yQGNLTNoMCCJJLqwu-Y",
+  apiKey: "AIzaSyBeqAN2yExTlxRUgyM459JiR-EmVPIzf5M",
   authDomain: "wad2-assignment-1.firebaseapp.com",
   projectId: "wad2-assignment-1",
   storageBucket: "wad2-assignment-1.appspot.com",

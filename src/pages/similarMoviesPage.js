@@ -39,7 +39,7 @@ const SimilarMoviesPage = () => {
       {similar ? (
         <>
           <PageTemplate
-            title={`Similar 2: ${movie.title}`}
+            title={`Similar to ${movie.title}`}
             movies={movies}
             action={(movie) => {
               return (

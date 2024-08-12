@@ -140,8 +140,8 @@ const ActorsDetailsPage = () => {
           <Link to={`/actors/${id}/actors-movies`}>
             <StyledButton>View {actor.name}'s Movies</StyledButton>
           </Link>
-          <Link to={`/actors/${id}/actors-movies`}>
-            <StyledButton>View {actor.name}'s Credits</StyledButton>
+          <Link to={`/actors/${id}/actors-credits`}>
+            <StyledButton>View {actor.name}'s Credits </StyledButton>
           </Link>
           <StyledLink
             href={`https://www.imdb.com/name/${actor.imdb_id}`}

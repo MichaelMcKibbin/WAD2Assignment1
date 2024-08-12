@@ -234,6 +234,24 @@ export const getActorDetails = async ({ queryKey }) => {
   }
 };
 
+export const getActorName = async (id) => {
+  try {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch actor name");
+    }
+
+    const data = await response.json();
+    return data.name;
+  } catch (error) {
+    throw error;
+  }
+};
+
+// movies appeared in
 export const getActorMovieCredits = async (id) => {
   try {
     const response = await fetch(
@@ -256,8 +274,8 @@ export const getActorMovieCredits = async (id) => {
 //   const [, idPart] = args.queryKey;
 //   const { id } = idPart;
 //   return fetch(
-//     `https://api.themoviedb.org/3/person/6968/movie_credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
-//     //`https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+//     //`https://api.themoviedb.org/3/person/6968/movie_credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+//     `https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
 //   )
 //     .then((response) => {
 //       if (!response.ok) {
@@ -269,3 +287,22 @@ export const getActorMovieCredits = async (id) => {
 //       throw error;
 //     });
 // };
+
+// *movie id credits* gets cast and crew from movie with id #
+export const getCastMembers = (args) => {
+  console.log(args);
+  const [, idPart] = args.queryKey;
+  const { id } = idPart;
+  return fetch(
+    `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+  )
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(response.json().message);
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      throw error;
+    });
+};

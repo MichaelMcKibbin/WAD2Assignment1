@@ -32,7 +32,7 @@ const MovieActorsPage = () => {
       {actors ? (
         <React.Fragment>
           <ActorsListTemplate
-            title={`Actors in ${id}`}
+            title={`Cast of ${id}`}
             actors={actors}
             action={(actor) => {
               return <AddToFavoritesIcon actor={actor} />;
