@@ -69,7 +69,7 @@ function App() {
               <Route path="/latest" element={<LatestMoviesPage />} />
               <Route path="/reviews/form" element={<AddMovieReviewPage />} />
               <Route path="/movies/toprated" element={<TopRatedMoviesPage />} />
-              <Route path="/popular" element={<PopularMoviesPage />} />
+              <Route path="/movies/popular" element={<PopularMoviesPage />} />
               <Route path="/reviews/:id" element={<MovieReviewPage />} />
               <Route
                 path="/movies/similar/:id"

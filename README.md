@@ -10,12 +10,11 @@ This repo contains the code for **Assignment 1** for the **Web App Development 2
 
 ## Existing pages & features
 
-HomePage - <br>
-Movie Details Page - <br>
-Movie Reviews Page - Display existing reviews from the database.<br>
-Add Movie Review Page - Add a review. <br>
+HomePage - Discover movies list.<br>
+Movie Details Page - Poster images, Overview, Genre, Production Countries, and some other details.<br>
+Movie Reviews Page - Display existing reviews from the TMDB database.<br>
+Add Movie Review Page - Add a review. Linked from button on movie cards. <br>
 Favorite Movies Page - Tag movies as favorites (US spelling to match react)<br>
-Playlist Movies Page (My Playlist) - Add movies to a 'must watch' list<br>
 Upcoming Movies Page - Movies coming soon.<br>
 <br>
 <br>
@@ -25,11 +24,18 @@ Uses react query<br>
 
 [ A bullet-point list of the __new features__ you added to the Movies Fan app (and any modifications to existing features) .]
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Latest Movie Page - Shows one movie selected by TMDB
+- Playlist Movies Page (My Playlist) - Add movies to a 'My Playlist' list<br>
+  Similar to the Favorites list.
+- Cast (of current movie). Opens in new window. Links from button on movie details page.
+  Lists actors in movie. Links to Actors biography page.
+- Biography page (per actor).
+  Links to movies actor has appeared in, actors credits, and actors IMDB page which opens in a new window.
+- Pagination, (some)
+- Similar Movies - linked from button on movie details page.
+
 - etc
-- Added Firebase Authentication<br>
+- Added Firebase Authentication - A sign up / login feature<br>
 
 ## Additional Sources & Tutorials
 

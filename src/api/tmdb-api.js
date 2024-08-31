@@ -1,18 +1,43 @@
-export const getMovies = (page = 2) => {
-  const pageNumber = typeof page === "number" ? page : 2;
-  return fetch(
-    `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&include_adult=false&page=${pageNumber}`
-  )
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(response.json().message);
-      }
-      return response.json();
-    })
-    .catch((error) => {
-      throw error;
-    });
+// export const getMovies = (page = 1) => {
+//   const pageNumber = typeof page === "number" ? page : 1;
+//   return fetch(
+//     `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&include_adult=false&page=${pageNumber}`
+//   )
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw new Error(response.json().message);
+//       }
+//       return response.json();
+//     })
+//     .catch((error) => {
+//       throw error;
+//     });
+// };
+export const getMovies = async (page = 1) => {
+  const pageNumber = typeof page === "number" ? page : 1;
+  try {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&include_adult=false&page=${pageNumber}`
+    );
+
+    if (!response.ok) {
+      throw new Error(response.json().message);
+    }
+
+    const data = await response.json();
+    const { results, total_pages, total_results } = data;
+
+    return {
+      movies: results,
+      currentPage: pageNumber,
+      totalPages: total_pages,
+      totalResults: total_results,
+    };
+  } catch (error) {
+    throw error;
+  }
 };
+
 export const getUpcoming = () => {
   return fetch(
     `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&include_adult=false&page=1`
@@ -149,7 +174,7 @@ export const getTopRatedMovies = () => {
 };
 export const getPopularMovies = () => {
   return fetch(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+    `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`
   )
     .then((response) => {
       if (!response.ok) {
