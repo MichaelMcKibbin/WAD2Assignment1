@@ -8,8 +8,6 @@ This assignment is an extension of the [react-movie-labs](https://github.com/Mic
 
 This repo contains the code for **Assignment 1** for the **Web App Development 2** module.
 
-![image] ()
-
 ## Existing pages & features
 
 HomePage - Discover movies list.<br>
