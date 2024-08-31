@@ -22,8 +22,6 @@ Uses react query<br>
 
 ### Added Features.
 
-[ A bullet-point list of the __new features__ you added to the Movies Fan app (and any modifications to existing features) .]
-
 - Latest Movie Page - Shows one movie selected by TMDB
 - Playlist Movies Page (My Playlist) - Add movies to a 'My Playlist' list<br>
   Similar to the Favorites list.
@@ -37,7 +35,7 @@ Uses react query<br>
 - etc
 - Added Firebase Authentication - A sign up / login feature<br>
 
-## Additional Sources & Tutorials
+## Additional Sources & Tutorials / Independent learning
 
 ### Firebase<br>
 
@@ -51,49 +49,50 @@ Uses react query<br>
 
 ## Setup requirements.
 
-[ Outline any non-standard setup steps necessary to run your app locally after cloning the repo.]
+sign up & login to TMDB to get an API key and insert it into the .env file in the project's root folder.
+Do the same with Firebase key
 
-### Created script (moviescript.sh) to automate initialisation and starting the app.
+- .env file
+  REACT_APP_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  FIREBASE_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-- npm install
-- npm install uuid --save
-- npm install @mui/material @emotion/react @emotion/styled @mui/icons-material --save
-- npm run storybook
-- npm install react-router-dom
-- npm install --save react-query
-- npm install react-hook-form --save
-- npm install firebase
-- npm install styled-components
-- npm start
+Commands used to initialise and start app.
 
-## API endpoints.
+- npm
+- storybook
+- @mui/material
+- @emotion/react
+- @emotion/styled
+- @mui/icons-material
+- react-router-dom
+- react-query
+- firebase
+- styled-components
+- react-scripts
 
-[ List the __additional__ TMDB endpoints used, giving the description and pathname for each one.]
+### Installation script
 
-e.g.
+Added script (moviescript.sh) to automate first initialisation and start up.
 
-- Discover list of movies - discover/movie
-- Movie details - movie/:id
-- Movie genres = /genre/movie/list
+## API endpoints & routing.
 
-## Routing.
-
-[ List the __new routes__ supported by your app and state the associated page.]
-
-- /blogs - displays all published blogs.
-- /blogs/:id - displays a particular blog.
-- /blogs/:id/comments - detail view of a particular blog and its comments.
-- etc.
+- /reviews/:id - Movie Review Page
+- /movies/favorites Favorite Movies Page
+- /movies/playlist - Playlist Movies Page
+- /movies/upcoming - Upcoming Movies Page
+- /latest - Latest Movies Page
+- /reviews/form - Add Movie Review Page
+- /movies/toprated - Top Rated Movies Page
+- /movies/popular - Popular Movies Page
+- /reviews/:id - Movie Review Page
+- /movies/similar/:id Similar Movies Page
+- /actors/credits/:id - Movie Actors Page
+- /actors/:id - Actors Details Page
+- /actors/:id/actors-movies/ Actors Movie Credits Page
+- /movies/:id - Movie Page
+- /authentication - Log in Or Signup Page
 
 [If relevant, state what aspects of your app are protected (i.e. require authentication) and what is public.]
-
-## Independent learning (If relevant).
-
-Itemize the technologies/techniques you researched independently and adopted in your project,
-i.e. aspects not covered in the lectures/labs. Include the source code filenames that illustrate these
-(we do not require code excerpts) and provide references to the online resources that helped you (articles/blogs).
-
----
 
 ## Available Scripts
 

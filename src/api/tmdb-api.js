@@ -1,18 +1,3 @@
-// export const getMovies = (page = 1) => {
-//   const pageNumber = typeof page === "number" ? page : 1;
-//   return fetch(
-//     `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&include_adult=false&page=${pageNumber}`
-//   )
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw new Error(response.json().message);
-//       }
-//       return response.json();
-//     })
-//     .catch((error) => {
-//       throw error;
-//     });
-// };
 export const getMovies = async (page = 1) => {
   const pageNumber = typeof page === "number" ? page : 1;
   try {
@@ -295,24 +280,6 @@ export const getActorMovieCredits = async (id) => {
   }
 };
 
-// export const getActorMovieCredits = (args) => {
-//   const [, idPart] = args.queryKey;
-//   const { id } = idPart;
-//   return fetch(
-//     //`https://api.themoviedb.org/3/person/6968/movie_credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
-//     `https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
-//   )
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw new Error(response.json().message);
-//       }
-//       return response.json();
-//     })
-//     .catch((error) => {
-//       throw error;
-//     });
-// };
-
 // *movie id credits* gets cast and crew from movie with id #
 export const getCastMembers = (args) => {
   console.log(args);
@@ -331,3 +298,6 @@ export const getCastMembers = (args) => {
       throw error;
     });
 };
+
+// recommendations
+// https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${process.env.REACT_APP_API_KEY}
