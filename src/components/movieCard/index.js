@@ -80,6 +80,8 @@ export default function MovieCard({ movie, action }) {
                 src={customFavoriteIcon}
                 alt="FavPlay Icon"
                 style={{
+                  backgroundColor: "green",
+
                   width: "24px", // Adjust the width and height as needed
                   height: "24px",
                 }}
